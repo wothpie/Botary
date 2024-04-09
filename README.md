@@ -1,7 +1,7 @@
-# Botary API Kütüphanesi
+# Botary SDCP Kütüphanesi
 
 
-<p>Botary API kütüphanesi sayesinde uygulamalarınıza botary'den çektiğiniz verileri kolayca işleyebilirsiniz.</p>
+<p>Botary SDCP kütüphanesi sayesinde uygulamalarınıza botary'den çektiğiniz verileri kolayca işleyebilirsiniz.</p>
 
 <h2>Nasıl Kullanılır?</h2>
 
@@ -17,11 +17,11 @@
         <h3>Kullanım</h3>
         <ul>
             <li>
-                <p>Botary API'ye erişmek için, öncelikle bir API anahtarı almanız gerekmektedir. API anahtarınızı <a href="https://www.botary.projectbo.com.tr/">Botary'nin resmi websitesinden</a> edinebilirsiniz.</p>
+                <p>Botary SDCP'ye erişmek için, öncelikle bir SDCP anahtarı almanız gerekmektedir. SDCP anahtarınızı <a href="https://www.botary.projectbo.com.tr/">Botary'nin resmi websitesinden</a> edinebilirsiniz.</p>
                 <p>Kütüphaneyi projenize dahil ettikten sonra, aşağıdaki örnek kodu kullanarak botary'den veri çekebilirsiniz:</p>
                 <pre><code>from botary.main import *
 
-# Botary API anahtarınızı buraya girin
+# Botary SDCP anahtarınızı buraya girin
 
 veri = GetBotaryTitle("fate")
 
