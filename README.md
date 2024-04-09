@@ -70,9 +70,9 @@ Kitabın Yazarı İçin: <code>GetBotaryOwner("API_Kodu","Çekilecek_Tür","Kate
 </ul>
 <h2>Notlar:</h2>
 <ul>
-    <li>API anahtarınızı gizli tutun ve kodunuzda doğrudan yazmayın.</li>
+    <li>SDCP anahtarınızı gizli tutun ve kodunuzda doğrudan yazmayın.</li>
     <li><code>GetBotaryTitle()</code> fonksiyonu örnektir, gerçek istekleri ihtiyacınıza göre uyarlayabilirsiniz.</li>
-    <li>API kullanım başına kullanan kişinin hem kullanıcının güvenliği hem API sahibinin güvenliği için IP adresi sistemimize kaydedilmektedir, bunu kabul ederek kütüphanemizi kullanıyorsunuz.</li>
+    <li>SDCP kullanım başına kullanan kişinin hem kullanıcının güvenliği hem SDCP sahibinin güvenliği için IP adresi sistemimize kaydedilmektedir, bunu kabul ederek kütüphanemizi kullanıyorsunuz.</li>
 </ul>
 
 <h2>Destek</h2>
