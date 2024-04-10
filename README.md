@@ -61,12 +61,17 @@ Kitap sahibini çekmek istiyorsanız
 <h1>Şablon</h1>
 <ul>
   <li>
-Kitap Başlığı İçin: <code>GetBotaryTitle("API_Kodu","Çekilecek_Tür","Kategori","Kitabın_Kodu")</code>
+Kitap Başlığı İçin: <code>GetBotaryTitle("SDCP_Kodu","Çekilecek_Tür","Kategori","Kitabın_Kodu")</code>
   </li><li>
-Kitap İçeriği İçin: <code>GetBotaryContent("API_Kodu","Çekilecek_Tür","Kategori","Kitabın_Kodu")</code>
+Kitap İçeriği İçin: <code>GetBotaryContent("SDCP_Kodu","Çekilecek_Tür","Kategori","Kitabın_Kodu")</code>
   </li><li>
-Kitabın Yazarı İçin: <code>GetBotaryOwner("API_Kodu","Çekilecek_Tür","Kategori","Kitabın_Kodu")</code></li>
-
+Kitabın Yazarı İçin: <code>GetBotaryOwner("SDCP_Kodu","Çekilecek_Tür","Kategori","Kitabın_Kodu")</code></li>
+<li>
+Kitabın Yazılış Tarihi İçin: <code>GetBotaryDate("SDCP_Kodu","Çekilecek_Tür","Kategori","Kitabın_Kodu")</code></li>
+    <li>
+Kitap Hakkında İçin: <code>GetBotaryInfo("SDCP_Kodu","Çekilecek_Tür","Kategori","Kitabın_Kodu")</code></li>
+    <li>
+Kitabın Öngösterimi İçin: <code>GetBotaryPreview("SDCP_Kodu","Çekilecek_Tür","Kategori","Kitabın_Kodu")</code></li>
 </ul>
 <h2>Notlar:</h2>
 <ul>
