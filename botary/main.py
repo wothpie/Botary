@@ -10,38 +10,17 @@ def get_external_ip():
         return None
 
 ip = get_external_ip()
-
+headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    }
 url = "https://api.projectbo.com.tr/"
 
-def GetBotaryTitle(API, cek, S232, S243):
+def GetBotaryTitle(SDCP, cek, S232, S243):
     f = "GetBotaryTitle"
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
-    }
+
     response = requests.post(url, data={
         'func': f,
-        'API': API,
-        'cek': cek,
-         'ip' : ip,
-        'S232': S232,
-        'S243': S243
-    }, headers=headers)
-
-    if response.status_code == 200:
-        return response.text
-    else:
-        print(f"Fonksiyon çağrısı başarısız oldu. Hata kodu: {response.status_code}")
-        print(f"SDCP yanıtı: {response.text}")
-        return None
-
-def GetBotaryContent(API, cek, S232, S243):
-    f = "GetBotaryContent"
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
-    }
-    response = requests.post(url, data={
-        'func': f,
-        'API': API,
+        'SDCP': SDCP,
         'cek': cek,
          'ip' : ip,
         'S232': S232,
@@ -54,14 +33,84 @@ def GetBotaryContent(API, cek, S232, S243):
         print("Fonksiyon çağrısı başarısız oldu.")
         return None
 
-def GetBotaryOwner(API, cek, S232, S243):
-    f = "GetBotaryOwner"
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
-    }
+def GetBotaryContent(SDCP, cek, S232, S243):
+    f = "GetBotaryContent"
+
     response = requests.post(url, data={
         'func': f,
-        'API': API,
+        'SDCP': SDCP,
+        'cek': cek,
+         'ip' : ip,
+        'S232': S232,
+        'S243': S243
+    }, headers=headers)
+
+    if response.status_code == 200:
+        return response.text
+    else:
+        print("Fonksiyon çağrısı başarısız oldu.")
+        return None
+
+def GetBotaryOwner(SDCP, cek, S232, S243):
+    f = "GetBotaryOwner"
+
+    response = requests.post(url, data={
+        'func': f,
+        'SDCP': SDCP,
+        'cek': cek,
+         'ip' : ip,
+        'S232': S232,
+        'S243': S243
+    }, headers=headers)
+
+    if response.status_code == 200:
+        return response.text
+    else:
+        print("Fonksiyon çağrısı başarısız oldu.")
+        return None
+    
+def GetBotaryInfo(SDCP, cek, S232, S243):
+    f = "GetBotaryInfo"
+
+    response = requests.post(url, data={
+        'func': f,
+        'SDCP': SDCP,
+        'cek': cek,
+         'ip' : ip,
+        'S232': S232,
+        'S243': S243
+    }, headers=headers)
+
+    if response.status_code == 200:
+        return response.text
+    else:
+        print("Fonksiyon çağrısı başarısız oldu.")
+        return None    
+
+def GetBotaryPreview(SDCP, cek, S232, S243):
+    f = "GetBotaryPreview"
+
+    response = requests.post(url, data={
+        'func': f,
+        'SDCP': SDCP,
+        'cek': cek,
+         'ip' : ip,
+        'S232': S232,
+        'S243': S243
+    }, headers=headers)
+
+    if response.status_code == 200:
+        return response.text
+    else:
+        print("Fonksiyon çağrısı başarısız oldu.")
+        return None
+    
+def GetBotaryDate(SDCP, cek, S232, S243):
+    f = "GetBotaryDate"
+
+    response = requests.post(url, data={
+        'func': f,
+        'SDCP': SDCP,
         'cek': cek,
          'ip' : ip,
         'S232': S232,
