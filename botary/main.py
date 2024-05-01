@@ -1,5 +1,5 @@
 import requests
-
+import json
 
 def get_external_ip():
     try:
@@ -15,12 +15,23 @@ headers = {
     }
 url = "https://api.projectbo.com.tr/"
 
-def GetBotaryTitle(SDCP, cek, S232, S243):
-    f = "GetBotaryTitle"
+def GiveSDCP():
+    try:
+        with open("sdcp_data.json", "r") as file:
+            data = json.load(file)
+            return data["SDCP"]
+    except Exception as e:
+        print("Hata:", e)
+        return None
+    
+SDCPs = GiveSDCP()
 
+def GetBotaryTitle(cek, S232, S243):
+    f = "GetBotaryTitle"
+ 
     response = requests.post(url, data={
         'func': f,
-        'SDCP': SDCP,
+        'SDCP': SDCPs,
         'cek': cek,
          'ip' : ip,
         'S232': S232,
@@ -33,12 +44,12 @@ def GetBotaryTitle(SDCP, cek, S232, S243):
         print("Fonksiyon çağrısı başarısız oldu.")
         return None
 
-def GetBotaryContent(SDCP, cek, S232, S243):
+def GetBotaryContent(cek, S232, S243):
     f = "GetBotaryContent"
 
     response = requests.post(url, data={
         'func': f,
-        'SDCP': SDCP,
+        'SDCP': SDCPs,
         'cek': cek,
          'ip' : ip,
         'S232': S232,
@@ -51,12 +62,12 @@ def GetBotaryContent(SDCP, cek, S232, S243):
         print("Fonksiyon çağrısı başarısız oldu.")
         return None
 
-def GetBotaryOwner(SDCP, cek, S232, S243):
+def GetBotaryOwner(cek, S232, S243):
     f = "GetBotaryOwner"
 
     response = requests.post(url, data={
         'func': f,
-        'SDCP': SDCP,
+        'SDCP': SDCPs,
         'cek': cek,
          'ip' : ip,
         'S232': S232,
@@ -69,12 +80,12 @@ def GetBotaryOwner(SDCP, cek, S232, S243):
         print("Fonksiyon çağrısı başarısız oldu.")
         return None
     
-def GetBotaryInfo(SDCP, cek, S232, S243):
+def GetBotaryInfo(cek, S232, S243):
     f = "GetBotaryInfo"
 
     response = requests.post(url, data={
         'func': f,
-        'SDCP': SDCP,
+        'SDCP': SDCPs,
         'cek': cek,
          'ip' : ip,
         'S232': S232,
@@ -87,12 +98,12 @@ def GetBotaryInfo(SDCP, cek, S232, S243):
         print("Fonksiyon çağrısı başarısız oldu.")
         return None    
 
-def GetBotaryPreview(SDCP, cek, S232, S243):
+def GetBotaryPreview(cek, S232, S243):
     f = "GetBotaryPreview"
 
     response = requests.post(url, data={
         'func': f,
-        'SDCP': SDCP,
+        'SDCP': SDCPs,
         'cek': cek,
          'ip' : ip,
         'S232': S232,
@@ -105,12 +116,12 @@ def GetBotaryPreview(SDCP, cek, S232, S243):
         print("Fonksiyon çağrısı başarısız oldu.")
         return None
     
-def GetBotaryDate(SDCP, cek, S232, S243):
+def GetBotaryDate(cek, S232, S243):
     f = "GetBotaryDate"
 
     response = requests.post(url, data={
         'func': f,
-        'SDCP': SDCP,
+        'SDCP': SDCPs,
         'cek': cek,
          'ip' : ip,
         'S232': S232,
